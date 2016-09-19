@@ -94,6 +94,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxk-8c-nlM">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCu-Yj-3ql">
+                                <frame key="frameInset" minX="67" minY="325" width="241" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -103,6 +110,9 @@
                             <constraint firstItem="7cf-wY-0WG" firstAttribute="top" secondItem="Dxk-8c-nlM" secondAttribute="bottom" constant="350" id="feT-C8-2QY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="attemptsLabel" destination="GCu-Yj-3ql" id="gOc-DN-kax"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OIg-M2-7jo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
