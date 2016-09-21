@@ -9,22 +9,53 @@
 import UIKit
 
 class GameBoard: UIViewController {
-
+   
+    
+    var guesses = 6
+    var target = ""
+    var badchars = ""
+    var attempt = ""
+    @IBAction func addLetter(_ sender: UIButton) {
+        let letter = sender.currentTitle!
+        if((badchars.range(of: letter)) != nil||attempt.range(of: letter) != nil){
+            print("Ta litera już była")
+        }
+        let loc = target.range(of: letter)
+        if(loc != nil){
+            print("poprawna litera to \(letter)")
+            
+            
+            
+        }
+        else {
+            
+            print("Nie ma takiej litery")
+            guesses -= 1
+            badchars += letter
+            
+            
+        
+    
+            
+            
+        }
+        
+    }
     @IBOutlet weak var attemptsLabel: UILabel!
-    let wordlist = ["agrest","bigos","czara","obuwie"]
+    let wordlist = ["AGREST","BIGOS","CZARA","OBUWIE"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        let target =
+         target =
         "\(wordlist[Int(arc4random_uniform(UInt32(wordlist.count)))])"
     
         let lenght = target.characters.count
-        var attemt = ""
-        for _ in 0..<lenght{
-            attemt += "-  "
-        }
-        attemptsLabel.text = attemt
-        var badchars = ""
         
+        for _ in 0..<lenght{
+            attempt += "-  "
+        }
+        attemptsLabel.text = attempt
+        
+        print(target)
         
         
      
