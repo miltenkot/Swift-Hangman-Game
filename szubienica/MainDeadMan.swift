@@ -1,15 +1,14 @@
 //
-//  DeadMan.swift
+//  MainDeadMan.swift
 //  szubienica
 //
-//  Created by Bartek Lanczyk on 14.09.2016.
+//  Created by Bartek Lanczyk on 22.09.2016.
 //  Copyright © 2016 miltenkot. All rights reserved.
 //
 
 import UIKit
 @IBDesignable
-class DeadMan: UIView {
-
+class MainDeadMan: UIView {
     
     public func pathForFirstStep()->UIBezierPath{
         let path = UIBezierPath()
@@ -37,7 +36,7 @@ class DeadMan: UIView {
     }
     public func pathForFourthStep()->UIBezierPath{
         let path = UIBezierPath(arcCenter: CGPoint(x: 150, y: 80), radius: min(bounds.size.width,bounds.size.height)/2*0.2, startAngle: 0.0, endAngle: CGFloat( 2*M_PI), clockwise: false)
-     
+        
         path.lineWidth = 8.0
         return path
         
@@ -50,7 +49,7 @@ class DeadMan: UIView {
         return path
         
     }
-   
+    
     public func pathForSixthStep()->UIBezierPath{
         let path = UIBezierPath()
         path.move(to: CGPoint(x: 150.0, y:105.0))
@@ -84,21 +83,51 @@ class DeadMan: UIView {
         
     }
 
- 
-
-
+    var pathCase:[UIBezierPath] = []
+    public func whatStep(arg:Int)->[UIBezierPath]{
+        switch arg {
+        case 1:
+            pathCase.append(pathForFirstStep())
+        case 2:
+            pathCase.append(pathForSecoundStep())
+        case 3:
+            pathCase.append(pathForThirdStep())
+        case 4:
+            pathCase.append(pathForFourthStep())
+        case 5:
+            pathCase.append(pathForFifthStep())
+        case 6:
+            pathCase.append(pathForSixthStep())
+        case 7:
+            pathCase.append(pathForSeventhStep())
+        case 8:
+            pathCase.append(pathForEighthStep())
+        case 9:
+            pathCase.append(pathForNinthStep())
+        default:
+            return pathCase
+        }
+        return pathCase
+        
+        
+        
+    }
+    
+    public var cout = 0
+    
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
     
     override func draw(_ rect: CGRect) {
-        
+        super.draw(rect)
         UIColor.black.set()
-        pathForFirstStep().stroke()
-        pathForSecoundStep().stroke()
-        pathForThirdStep().stroke()
-        pathForFourthStep().stroke()
-        pathForFifthStep().stroke()
-        pathForSixthStep().stroke()
-        pathForSeventhStep().stroke()
-        pathForEighthStep().stroke()
-        pathForNinthStep().stroke()
+        let step  =  whatStep(arg: cout)
+        for arg in step{
+            arg.stroke()
+        }
+        
+        
+        
+        
     }
 }

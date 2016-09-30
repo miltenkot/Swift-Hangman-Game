@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF7D95901D930CA4001B85C0 /* DeadManInSecoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7D958F1D930CA4001B85C0 /* DeadManInSecoundView.swift */; };
+		DF0A6D7C1D94328F00668E5E /* MainDeadMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0A6D7B1D94328F00668E5E /* MainDeadMan.swift */; };
 		DF818CD11D8AD50D004E8F5F /* DeadMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF818CD01D8AD50D004E8F5F /* DeadMan.swift */; };
 		DF9D25041D88829F00E5C193 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9D25031D88829F00E5C193 /* AppDelegate.swift */; };
 		DF9D25061D88829F00E5C193 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9D25051D88829F00E5C193 /* ViewController.swift */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DF7D958F1D930CA4001B85C0 /* DeadManInSecoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadManInSecoundView.swift; sourceTree = "<group>"; };
+		DF0A6D7B1D94328F00668E5E /* MainDeadMan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDeadMan.swift; sourceTree = "<group>"; };
 		DF818CD01D8AD50D004E8F5F /* DeadMan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadMan.swift; sourceTree = "<group>"; };
 		DF9D25001D88829F00E5C193 /* szubienica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = szubienica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9D25031D88829F00E5C193 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,9 +60,9 @@
 		DF9D25021D88829F00E5C193 /* szubienica */ = {
 			isa = PBXGroup;
 			children = (
-				DF7D958F1D930CA4001B85C0 /* DeadManInSecoundView.swift */,
 				DF9D25031D88829F00E5C193 /* AppDelegate.swift */,
 				DF818CD01D8AD50D004E8F5F /* DeadMan.swift */,
+				DF0A6D7B1D94328F00668E5E /* MainDeadMan.swift */,
 				DFA5F9AB1D8C448900C55AA0 /* GameBoard.swift */,
 				DF9D25051D88829F00E5C193 /* ViewController.swift */,
 				DF9D25071D88829F00E5C193 /* Main.storyboard */,
@@ -148,7 +148,7 @@
 			files = (
 				DFA5F9AC1D8C448900C55AA0 /* GameBoard.swift in Sources */,
 				DF818CD11D8AD50D004E8F5F /* DeadMan.swift in Sources */,
-				DF7D95901D930CA4001B85C0 /* DeadManInSecoundView.swift in Sources */,
+				DF0A6D7C1D94328F00668E5E /* MainDeadMan.swift in Sources */,
 				DF9D25061D88829F00E5C193 /* ViewController.swift in Sources */,
 				DF9D25041D88829F00E5C193 /* AppDelegate.swift in Sources */,
 			);

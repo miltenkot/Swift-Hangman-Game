@@ -91,7 +91,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxk-8c-nlM" customClass="DeadManInSecoundView" customModule="szubienica" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxk-8c-nlM" customClass="MainDeadMan" customModule="szubienica" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCu-Yj-3ql">
@@ -152,7 +152,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OR0-G6-icQ">
                                 <frame key="frameInset" minX="300" minY="481" width="36" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="U"/>
+                                <state key="normal" title="X"/>
                                 <connections>
                                     <action selector="addLetter:" destination="BMJ-4g-54h" eventType="touchUpInside" id="dJm-tk-IZm"/>
                                 </connections>
@@ -240,7 +240,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rY1-fT-Qz2">
                                 <frame key="frameInset" minX="168" minY="481" width="36" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="R"/>
+                                <state key="normal" title="K"/>
                                 <connections>
                                     <action selector="addLetter:" destination="BMJ-4g-54h" eventType="touchUpInside" id="lTK-zq-GOY"/>
                                 </connections>
@@ -264,7 +264,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="903-hd-pxv">
                                 <frame key="frameInset" minX="300" minY="394" width="36" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="X"/>
+                                <state key="normal" title="U"/>
                                 <connections>
                                     <action selector="addLetter:" destination="BMJ-4g-54h" eventType="touchUpInside" id="sHg-WG-Duh"/>
                                 </connections>

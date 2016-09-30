@@ -9,7 +9,7 @@
 import UIKit
 
 class GameBoard: UIViewController {
-   
+ var  HangManOutlet:MainDeadMan?
     
     var guesses = 6
     var target = ""
@@ -17,6 +17,7 @@ class GameBoard: UIViewController {
     var attempt = ""
     @IBAction func addLetter(_ sender: UIButton) {
         let letter = sender.currentTitle!
+        
         if((badchars.range(of: letter)) != nil||attempt.range(of: letter) != nil){
             print("Ta litera już była")
         }
@@ -28,15 +29,12 @@ class GameBoard: UIViewController {
             
         }
         else {
-            
+            HangManOutlet?.cout += 1
+            HangManOutlet?.setNeedsDisplay()
             print("Nie ma takiej litery")
             guesses -= 1
             badchars += letter
-            
-            
-        
-    
-            
+          
             
         }
         
@@ -56,6 +54,7 @@ class GameBoard: UIViewController {
         attemptsLabel.text = attempt
         
         print(target)
+        
         
         
      
