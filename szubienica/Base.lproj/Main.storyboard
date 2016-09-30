@@ -319,6 +319,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="HangManOutlet" destination="Dxk-8c-nlM" id="qcz-tr-hkd"/>
                         <outlet property="attemptsLabel" destination="GCu-Yj-3ql" id="gOc-DN-kax"/>
                     </connections>
                 </viewController>

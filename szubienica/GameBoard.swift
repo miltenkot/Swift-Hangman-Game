@@ -9,7 +9,8 @@
 import UIKit
 
 class GameBoard: UIViewController {
- var  HangManOutlet:MainDeadMan?
+ 
+    @IBOutlet weak var HangManOutlet: MainDeadMan!
     
     var guesses = 6
     var target = ""
@@ -24,6 +25,15 @@ class GameBoard: UIViewController {
         let loc = target.range(of: letter)
         if(loc != nil){
             print("poprawna litera to \(letter)")
+            let location:Range<String.Index> = target.range(of: letter)!
+           // let index: Int = target.distance(from: target.startIndex, to: location.lowerBound)
+        attempt.replaceSubrange(location, with: "\(letter)")
+            
+            attemptsLabel.text = attempt
+    
+         
+
+            
             
             
             
@@ -40,7 +50,7 @@ class GameBoard: UIViewController {
         
     }
     @IBOutlet weak var attemptsLabel: UILabel!
-    let wordlist = ["AGREST","BIGOS","CZARA","OBUWIE"]
+    let wordlist = ["AGRREST","BBIGOS","CZZARA","OOBUWIE"]
     override func viewDidLoad() {
         super.viewDidLoad()
          target =
@@ -49,7 +59,7 @@ class GameBoard: UIViewController {
         let lenght = target.characters.count
         
         for _ in 0..<lenght{
-            attempt += "-  "
+            attempt += "-"
         }
         attemptsLabel.text = attempt
         
