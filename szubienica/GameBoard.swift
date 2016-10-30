@@ -9,27 +9,36 @@
 import UIKit
 
 class GameBoard: UIViewController {
- 
+
     @IBOutlet weak var HangManOutlet: MainDeadMan!
     
     var guesses = 6
     var target = ""
     var badchars = ""
     var attempt = ""
+    struct  IndexName {
+        static var incrementValue = 1
+    }
     @IBAction func addLetter(_ sender: UIButton) {
         let letter = sender.currentTitle!
         
         if((badchars.range(of: letter)) != nil||attempt.range(of: letter) != nil){
             print("Ta litera już była")
         }
-        let loc = target.range(of: letter)
+       let loc = target.range(of: letter)
         if(loc != nil){
-            print("poprawna litera to \(letter)")
-            let location:Range<String.Index> = target.range(of: letter)!
-           // let index: Int = target.distance(from: target.startIndex, to: location.lowerBound)
-        attempt.replaceSubrange(location, with: "\(letter)")
+            let loc = Range(uncheckedBounds: (lower: target.startIndex, upper: target.endIndex))
+            let lettersInCase = target.rangesOfString(searchString: letter, options: NSString.CompareOptions.caseInsensitive, searchRange:loc )
             
-            attemptsLabel.text = attempt
+            for i in lettersInCase{
+                
+                attempt.replaceSubrange(i, with: "\(letter)")
+            }
+
+            
+          
+            
+        attemptsLabel.text = attempt
     
          
 
@@ -88,5 +97,21 @@ class GameBoard: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }
+extension String {
+    public func rangesOfString(searchString:String, options: NSString.CompareOptions = [], searchRange:Range<Index>? = nil ) -> [Range<Index>] {
+        if let range = range(of: searchString, options: options, range:searchRange) {
+            
+            //let nextRange = range.lowerBound.advancedBy(1)..<self.endIndex
+            let nextRange = Range(uncheckedBounds: (lower: index(range.lowerBound, offsetBy: 1), upper: endIndex))
+            return [range] + rangesOfString(searchString: searchString, searchRange: nextRange)
+        } else {
+            return []
+        }
+    }
+}
+
+
+
