@@ -16,9 +16,7 @@ class GameBoard: UIViewController {
     var target = ""
     var badchars = ""
     var attempt = ""
-    struct  IndexName {
-        static var incrementValue = 1
-    }
+    
     @IBAction func addLetter(_ sender: UIButton) {
         let letter = sender.currentTitle!
         
@@ -48,12 +46,29 @@ class GameBoard: UIViewController {
             
         }
         else {
+            if !badchars.contains(letter)
+            {
             HangManOutlet?.cout += 1
             HangManOutlet?.setNeedsDisplay()
             print("Nie ma takiej litery")
             guesses -= 1
-            badchars += letter
+                badchars += letter
+            }
           
+            
+        }
+        if (attempt != target){
+            if badchars.characters.count > 0 {
+                print("Zle litery : \(badchars)")
+                
+            }
+            print("Pozostalo szans \(guesses)")
+        
+        }
+        
+        if guesses == 0{
+            print("Przegrałeś")
+            
             
         }
         
