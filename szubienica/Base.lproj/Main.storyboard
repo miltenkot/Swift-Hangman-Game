@@ -309,6 +309,30 @@
                                     <action selector="addLetter:" destination="BMJ-4g-54h" eventType="touchUpInside" id="eEl-up-Ofj"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="akU-ts-L8a" customClass="EndGameAlert" customModule="szubienica" customModuleProvider="target">
+                                <frame key="frameInset" minX="66" minY="270" width="240.00000000000011" height="128.00000000000003"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="9Bv-UE-f0t">
+                                        <frame key="frameInset" minX="76" minY="15" width="95" height="102"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Przegrana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQq-KD-vVM">
+                                                <frame key="frameInset" width="95" height="26"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4Q-cd-bkI">
+                                                <frame key="frameInset" minX="31" minY="55" width="33" height="47"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="🔁"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -319,8 +343,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="EndGameAlertOutlet" destination="akU-ts-L8a" id="Jfv-Ho-DMU"/>
                         <outlet property="HangManOutlet" destination="Dxk-8c-nlM" id="qcz-tr-hkd"/>
                         <outlet property="attemptsLabel" destination="GCu-Yj-3ql" id="gOc-DN-kax"/>
+                        <outlet property="resultLabel" destination="BQq-KD-vVM" id="5B8-Eq-iXw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OIg-M2-7jo" userLabel="First Responder" sceneMemberID="firstResponder"/>

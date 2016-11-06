@@ -9,10 +9,14 @@
 import UIKit
 
 class GameBoard: UIViewController {
+    
 
+    @IBOutlet weak var resultLabel: UILabel!
+   
     @IBOutlet weak var HangManOutlet: MainDeadMan!
     
-    var guesses = 6
+    @IBOutlet weak var EndGameAlertOutlet: EndGameAlert!
+    var guesses = 9
     var target = ""
     var badchars = ""
     var attempt = ""
@@ -68,12 +72,21 @@ class GameBoard: UIViewController {
         
         if guesses == 0{
             print("Przegrałeś")
+            EndGameAlertOutlet.setNeedsDisplay()
+            EndGameAlertOutlet.makeCircular()
+            EndGameAlertOutlet.isHidden = false
             
-            
+        }
+        if attempt == target {
+            EndGameAlertOutlet.setNeedsDisplay()
+            EndGameAlertOutlet.makeCircular()
+            resultLabel.text = "Wygrana"
+            EndGameAlertOutlet.isHidden = false
+
         }
         
     }
-    @IBOutlet weak var attemptsLabel: UILabel!
+        @IBOutlet weak var attemptsLabel: UILabel!
     let wordlist = ["AGRREST","BBIGOS","CZZARA","OOBUWIE"]
     override func viewDidLoad() {
         super.viewDidLoad()
