@@ -309,37 +309,41 @@
                                     <action selector="addLetter:" destination="BMJ-4g-54h" eventType="touchUpInside" id="eEl-up-Ofj"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="akU-ts-L8a" customClass="EndGameAlert" customModule="szubienica" customModuleProvider="target">
-                                <frame key="frameInset" minX="66" minY="270" width="240.00000000000011" height="128.00000000000003"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view hidden="YES" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akU-ts-L8a" customClass="EndGameAlert" customModule="szubienica" customModuleProvider="target">
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="9Bv-UE-f0t">
-                                        <frame key="frameInset" minX="76" minY="15" width="95" height="102"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="9Bv-UE-f0t">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Przegrana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQq-KD-vVM">
-                                                <frame key="frameInset" width="95" height="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Przegrana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQq-KD-vVM">
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4Q-cd-bkI">
-                                                <frame key="frameInset" minX="31" minY="55" width="33" height="47"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4Q-cd-bkI">
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <state key="normal" title="🔁"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9Bv-UE-f0t" firstAttribute="leading" secondItem="akU-ts-L8a" secondAttribute="leadingMargin" id="4Kx-4D-oDe"/>
+                                    <constraint firstAttribute="height" constant="128" id="Hjs-Bz-5Nt"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="9Bv-UE-f0t" secondAttribute="bottom" id="SA9-gX-Ctr"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="9Bv-UE-f0t" secondAttribute="trailing" id="cSO-wd-jTf"/>
+                                    <constraint firstItem="9Bv-UE-f0t" firstAttribute="top" secondItem="akU-ts-L8a" secondAttribute="topMargin" id="hZI-1r-79u"/>
+                                    <constraint firstAttribute="width" constant="240" id="uIX-C6-Cgj"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Dxk-8c-nlM" firstAttribute="leading" secondItem="93i-jm-HsW" secondAttribute="leadingMargin" constant="51" id="2eH-xx-IL5"/>
                             <constraint firstItem="Dxk-8c-nlM" firstAttribute="centerX" secondItem="93i-jm-HsW" secondAttribute="centerX" id="9fg-Sl-kGt"/>
+                            <constraint firstItem="akU-ts-L8a" firstAttribute="centerY" secondItem="93i-jm-HsW" secondAttribute="centerY" id="H3w-iu-9ch"/>
                             <constraint firstItem="Dxk-8c-nlM" firstAttribute="top" secondItem="jkd-Mb-F5V" secondAttribute="bottom" constant="23" id="U95-0B-FLV"/>
                             <constraint firstItem="7cf-wY-0WG" firstAttribute="top" secondItem="Dxk-8c-nlM" secondAttribute="bottom" constant="350" id="feT-C8-2QY"/>
+                            <constraint firstItem="akU-ts-L8a" firstAttribute="centerX" secondItem="93i-jm-HsW" secondAttribute="centerX" id="zf0-6B-lSg"/>
                         </constraints>
                     </view>
                     <connections>

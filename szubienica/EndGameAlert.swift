@@ -19,6 +19,7 @@ class EndGameAlert: UIView {
     
 
 }
+//MARK: Extension
 extension EndGameAlert{
     func makeCircular(){
         self.layer.cornerRadius = min(self.frame.size.height, self.frame.size.width) / 2.0

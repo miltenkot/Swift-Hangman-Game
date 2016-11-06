@@ -8,9 +8,11 @@
 
 import UIKit
 @IBDesignable
-class DeadMan: UIView {
-
+ class DeadMan: UIView {
     
+
+    //MARK: UIBezzierPath Controller
+  
     public func pathForFirstStep()->UIBezierPath{
         let path = UIBezierPath()
         path.move(to: CGPoint(x: 50.0, y:10.0))
@@ -88,7 +90,7 @@ class DeadMan: UIView {
 
 
     
-    override func draw(_ rect: CGRect) {
+     override func draw(_ rect: CGRect) {
         
         UIColor.black.set()
         pathForFirstStep().stroke()
