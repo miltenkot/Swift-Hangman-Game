@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//FetchRequest
 
 class GameBoard: UIViewController {
     
@@ -83,11 +84,14 @@ class GameBoard: UIViewController {
     }
     
     @IBOutlet weak var attemptsLabel: UILabel!
-    let wordlist = ["AGRREST","BBIGOS","CZZARA","OOBUWIE"]
+    let wordlist:Set = ["AGRREST","BBIGOS","CZZARA","OOBUWIE"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+           
         target =
-        "\(wordlist[Int(arc4random_uniform(UInt32(wordlist.count)))])"
+       wordlist.randomElement()!
+        
         
         let lenght = target.characters.count
         
@@ -112,15 +116,7 @@ class GameBoard: UIViewController {
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+
     
     
 }
@@ -137,6 +133,10 @@ extension String {
         }
     }
 }
-
+extension Set {
+    func randomElement() -> Element? {
+        return count == 0 ? nil : self[index(startIndex, offsetBy: Int(arc4random())%count)]
+    }
+}
 
 
