@@ -337,6 +337,9 @@
                                                 <rect key="frame" x="85" y="54.5" width="54" height="57.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <state key="normal" title="🔁"/>
+                                                <connections>
+                                                    <action selector="restartGame:" destination="BMJ-4g-54h" eventType="touchUpInside" id="Bae-Pm-tp0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

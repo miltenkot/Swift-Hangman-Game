@@ -11,9 +11,10 @@ import UIKit
 class MainDeadMan: DeadMan {
     
   //MARK: UIBezzierPath Controller
-    var pathCase:[UIBezierPath] = []
+    public var pathCase:[UIBezierPath] = []
     public func whatStep(arg:Int)->[UIBezierPath]{
         switch arg {
+      
         case 1:
             pathCase.append(pathForFirstStep())
         case 2:
@@ -32,6 +33,9 @@ class MainDeadMan: DeadMan {
             pathCase.append(pathForEighthStep())
         case 9:
             pathCase.append(pathForNinthStep())
+        
+       
+            
         default:
             return pathCase
         }

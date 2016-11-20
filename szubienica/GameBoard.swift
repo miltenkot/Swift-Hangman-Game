@@ -14,6 +14,8 @@ class GameBoard: UIViewController {
     //MARK:Property
     var allWords = [String]()
     
+  
+   
     @IBOutlet weak var resultLabel: UILabel!
     
     @IBOutlet weak var HangManOutlet: MainDeadMan!
@@ -24,7 +26,12 @@ class GameBoard: UIViewController {
     var badchars = ""
     var attempt = ""
     //MARK: Actions
+
+    @IBAction func restartGame(_ sender: UIButton) {
+        restart()
+    }
     @IBAction func addLetter(_ sender: UIButton) {
+        
         let letter = sender.currentTitle!
         
         if((badchars.range(of: letter)) != nil||attempt.range(of: letter) != nil){
@@ -131,10 +138,26 @@ class GameBoard: UIViewController {
     }
     
     
-
-    
+//Restart game settings
+    func restart(){
+        guesses = 9
+        target = ""
+        badchars = ""
+        attempt = ""
+        
+        EndGameAlertOutlet.isHidden = true
+        
+        HangManOutlet?.cout = 0
+        //remove all UIBezzierPaths
+        HangManOutlet.pathCase.removeAll()
+        HangManOutlet.setNeedsDisplay()
+        //reload view
+        viewDidLoad()
+    }
     
 }
+
+
 //MARK: Extension
 extension String {
     public func rangesOfString(searchString:String, options: NSString.CompareOptions = [], searchRange:Range<Index>? = nil ) -> [Range<Index>] {
