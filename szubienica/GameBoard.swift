@@ -18,6 +18,7 @@ class GameBoard: UIViewController {
    
     @IBOutlet weak var resultLabel: UILabel!
     
+    @IBOutlet weak var badLettersLabel: UILabel!
     @IBOutlet weak var HangManOutlet: MainDeadMan!
     
     @IBOutlet weak var EndGameAlertOutlet: EndGameAlert!
@@ -68,6 +69,7 @@ class GameBoard: UIViewController {
         }
         if (attempt != target){
             if badchars.characters.count > 0 {
+                badLettersLabel.text = badchars
                 print("Zle litery : \(badchars)")
                 
             }
@@ -144,6 +146,7 @@ class GameBoard: UIViewController {
         target = ""
         badchars = ""
         attempt = ""
+        badLettersLabel.text = ""
         
         EndGameAlertOutlet.isHidden = true
         

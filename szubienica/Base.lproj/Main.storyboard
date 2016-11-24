@@ -113,6 +113,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZp-9f-4Cf">
+                                <rect key="frame" x="67" y="350" width="241" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiG-9V-ci3">
                                 <rect key="frame" x="36" y="394" width="36" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -369,6 +376,7 @@
                         <outlet property="EndGameAlertOutlet" destination="akU-ts-L8a" id="Jfv-Ho-DMU"/>
                         <outlet property="HangManOutlet" destination="Dxk-8c-nlM" id="qcz-tr-hkd"/>
                         <outlet property="attemptsLabel" destination="GCu-Yj-3ql" id="gOc-DN-kax"/>
+                        <outlet property="badLettersLabel" destination="kZp-9f-4Cf" id="ax2-Lk-zCr"/>
                         <outlet property="resultLabel" destination="BQq-KD-vVM" id="5B8-Eq-iXw"/>
                     </connections>
                 </viewController>
