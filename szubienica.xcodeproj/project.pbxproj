@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DF0A6D7C1D94328F00668E5E /* MainDeadMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0A6D7B1D94328F00668E5E /* MainDeadMan.swift */; };
+		DF59DC501DEE2726007D921F /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF59DC4F1DEE2726007D921F /* words.plist */; };
 		DF818CD11D8AD50D004E8F5F /* DeadMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF818CD01D8AD50D004E8F5F /* DeadMan.swift */; };
 		DF9D25041D88829F00E5C193 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9D25031D88829F00E5C193 /* AppDelegate.swift */; };
 		DF9D25061D88829F00E5C193 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9D25051D88829F00E5C193 /* ViewController.swift */; };
@@ -16,11 +17,11 @@
 		DF9D250E1D88829F00E5C193 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9D250C1D88829F00E5C193 /* LaunchScreen.storyboard */; };
 		DFA5F9AC1D8C448900C55AA0 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA5F9AB1D8C448900C55AA0 /* GameBoard.swift */; };
 		DFC576EF1DCFB113008BA681 /* EndGameAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC576EE1DCFB113008BA681 /* EndGameAlert.swift */; };
-		DFEBE9D11DDC618500683BDE /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = DFEBE9D01DDC618500683BDE /* words.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DF0A6D7B1D94328F00668E5E /* MainDeadMan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDeadMan.swift; sourceTree = "<group>"; };
+		DF59DC4F1DEE2726007D921F /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 		DF818CD01D8AD50D004E8F5F /* DeadMan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadMan.swift; sourceTree = "<group>"; };
 		DF9D25001D88829F00E5C193 /* szubienica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = szubienica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9D25031D88829F00E5C193 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +32,6 @@
 		DF9D250F1D88829F00E5C193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFA5F9AB1D8C448900C55AA0 /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 		DFC576EE1DCFB113008BA681 /* EndGameAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameAlert.swift; sourceTree = "<group>"; };
-		DFEBE9D01DDC618500683BDE /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 				DFC576EE1DCFB113008BA681 /* EndGameAlert.swift */,
 				DF9D25071D88829F00E5C193 /* Main.storyboard */,
 				DF9D250A1D88829F00E5C193 /* Assets.xcassets */,
-				DFEBE9D01DDC618500683BDE /* words.txt */,
+				DF59DC4F1DEE2726007D921F /* words.plist */,
 				DF9D250C1D88829F00E5C193 /* LaunchScreen.storyboard */,
 				DF9D250F1D88829F00E5C193 /* Info.plist */,
 			);
@@ -141,8 +141,8 @@
 			files = (
 				DF9D250E1D88829F00E5C193 /* LaunchScreen.storyboard in Resources */,
 				DF9D250B1D88829F00E5C193 /* Assets.xcassets in Resources */,
-				DFEBE9D11DDC618500683BDE /* words.txt in Resources */,
 				DF9D25091D88829F00E5C193 /* Main.storyboard in Resources */,
+				DF59DC501DEE2726007D921F /* words.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

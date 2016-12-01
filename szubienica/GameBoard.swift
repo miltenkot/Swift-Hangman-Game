@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import GameplayKit
 
 
 class GameBoard: UIViewController {
@@ -99,21 +98,13 @@ class GameBoard: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //MARK: Loads from txt file
-        if let filepath = Bundle.main.path(forResource: "words", ofType: "txt"){
-            do{
-                let contents = try String(contentsOfFile: filepath)
-                allWords = contents.components(separatedBy: "\n")
-            }catch{
-                
-            }
-        }else {
-            
-        }
-        //Array shuffle
-        allWords = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: allWords) as! [String]
-        //uppercase changing
-        target = allWords[Int(arc4random_uniform(UInt32(allWords.count)) + 1)].uppercased()
+        //MARK: Loads from plist
+
+        let filepath = Bundle.main.path(forResource: "words", ofType: "plist")
+        let blocksData = NSArray(contentsOfFile: filepath!)!
+        let randomPattern = blocksData[Int(arc4random_uniform(UInt32(blocksData.count)))]
+        
+        target = (randomPattern as AnyObject).uppercased
        
         
         
