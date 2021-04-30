@@ -67,7 +67,7 @@ class GameBoard: UIViewController {
             
         }
         if (attempt != target){
-            if badchars.characters.count > 0 {
+            if badchars.count > 0 {
                 badLettersLabel.text = badchars
                 print("Zle litery : \(badchars)")
                 
@@ -108,7 +108,7 @@ class GameBoard: UIViewController {
        
         
         
-        let lenght = target.characters.count
+        let lenght = target.count
         
         for _ in 0..<lenght{
             attempt += "-"

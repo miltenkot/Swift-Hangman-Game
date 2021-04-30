@@ -38,7 +38,7 @@ import UIKit
         
     }
     public func pathForFourthStep()->UIBezierPath{
-        let path = UIBezierPath(arcCenter: CGPoint(x: 150, y: 80), radius: min(bounds.size.width,bounds.size.height)/2*0.2, startAngle: 0.0, endAngle: CGFloat( 2*M_PI), clockwise: false)
+        let path = UIBezierPath(arcCenter: CGPoint(x: 150, y: 80), radius: min(bounds.size.width,bounds.size.height)/2*0.2, startAngle: 0.0, endAngle: CGFloat( 2*Double.pi), clockwise: false)
      
         path.lineWidth = 8.0
         return path
