@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		725B4129263C4DCD00F5557C /* Drawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725B4128263C4DCD00F5557C /* Drawer.swift */; };
+		725B412E263C4EE500F5557C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725B412D263C4EE500F5557C /* Result.swift */; };
+		725B4132263C509D00F5557C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725B4131263C509D00F5557C /* StringExtension.swift */; };
 		DF0A6D7C1D94328F00668E5E /* MainDeadMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0A6D7B1D94328F00668E5E /* MainDeadMan.swift */; };
 		DF59DC501DEE2726007D921F /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF59DC4F1DEE2726007D921F /* words.plist */; };
 		DF818CD11D8AD50D004E8F5F /* DeadMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF818CD01D8AD50D004E8F5F /* DeadMan.swift */; };
@@ -16,10 +19,12 @@
 		DF9D250B1D88829F00E5C193 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF9D250A1D88829F00E5C193 /* Assets.xcassets */; };
 		DF9D250E1D88829F00E5C193 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9D250C1D88829F00E5C193 /* LaunchScreen.storyboard */; };
 		DFA5F9AC1D8C448900C55AA0 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA5F9AB1D8C448900C55AA0 /* GameBoard.swift */; };
-		DFC576EF1DCFB113008BA681 /* EndGameAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC576EE1DCFB113008BA681 /* EndGameAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		725B4128263C4DCD00F5557C /* Drawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawer.swift; sourceTree = "<group>"; };
+		725B412D263C4EE500F5557C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		725B4131263C509D00F5557C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		DF0A6D7B1D94328F00668E5E /* MainDeadMan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDeadMan.swift; sourceTree = "<group>"; };
 		DF59DC4F1DEE2726007D921F /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 		DF818CD01D8AD50D004E8F5F /* DeadMan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadMan.swift; sourceTree = "<group>"; };
@@ -31,7 +36,6 @@
 		DF9D250D1D88829F00E5C193 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF9D250F1D88829F00E5C193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFA5F9AB1D8C448900C55AA0 /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
-		DFC576EE1DCFB113008BA681 /* EndGameAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		725B4121263C451700F5557C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				725B4130263C507B00F5557C /* Extensions */,
+				725B412B263C4ED400F5557C /* Enums */,
+				725B4127263C4DBB00F5557C /* Protocols */,
+				DF9D25071D88829F00E5C193 /* Main.storyboard */,
+				DF9D250C1D88829F00E5C193 /* LaunchScreen.storyboard */,
+				DF818CD01D8AD50D004E8F5F /* DeadMan.swift */,
+				DF0A6D7B1D94328F00668E5E /* MainDeadMan.swift */,
+				DFA5F9AB1D8C448900C55AA0 /* GameBoard.swift */,
+				DF9D25051D88829F00E5C193 /* ViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		725B4122263C455C00F5557C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DF9D250F1D88829F00E5C193 /* Info.plist */,
+				DF59DC4F1DEE2726007D921F /* words.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		725B4123263C45A800F5557C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF9D250A1D88829F00E5C193 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		725B4127263C4DBB00F5557C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				725B4128263C4DCD00F5557C /* Drawer.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		725B412B263C4ED400F5557C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				725B412D263C4EE500F5557C /* Result.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		725B4130263C507B00F5557C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				725B4131263C509D00F5557C /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DF9D24F71D88829F00E5C193 = {
 			isa = PBXGroup;
 			children = (
@@ -65,16 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				DF9D25031D88829F00E5C193 /* AppDelegate.swift */,
-				DF818CD01D8AD50D004E8F5F /* DeadMan.swift */,
-				DF0A6D7B1D94328F00668E5E /* MainDeadMan.swift */,
-				DFA5F9AB1D8C448900C55AA0 /* GameBoard.swift */,
-				DF9D25051D88829F00E5C193 /* ViewController.swift */,
-				DFC576EE1DCFB113008BA681 /* EndGameAlert.swift */,
-				DF9D25071D88829F00E5C193 /* Main.storyboard */,
-				DF9D250A1D88829F00E5C193 /* Assets.xcassets */,
-				DF59DC4F1DEE2726007D921F /* words.plist */,
-				DF9D250C1D88829F00E5C193 /* LaunchScreen.storyboard */,
-				DF9D250F1D88829F00E5C193 /* Info.plist */,
+				725B4121263C451700F5557C /* Modules */,
+				725B4123263C45A800F5557C /* Resources */,
+				725B4122263C455C00F5557C /* SupportingFiles */,
 			);
 			path = szubienica;
 			sourceTree = "<group>";
@@ -111,7 +165,7 @@
 				TargetAttributes = {
 					DF9D24FF1D88829F00E5C193 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 9AKL82KSN5;
+						DevelopmentTeam = WJ7R3MDXSW;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -155,10 +209,12 @@
 			files = (
 				DFA5F9AC1D8C448900C55AA0 /* GameBoard.swift in Sources */,
 				DF818CD11D8AD50D004E8F5F /* DeadMan.swift in Sources */,
-				DFC576EF1DCFB113008BA681 /* EndGameAlert.swift in Sources */,
 				DF0A6D7C1D94328F00668E5E /* MainDeadMan.swift in Sources */,
 				DF9D25061D88829F00E5C193 /* ViewController.swift in Sources */,
+				725B4132263C509D00F5557C /* StringExtension.swift in Sources */,
 				DF9D25041D88829F00E5C193 /* AppDelegate.swift in Sources */,
+				725B412E263C4EE500F5557C /* Result.swift in Sources */,
+				725B4129263C4DCD00F5557C /* Drawer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +356,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = szubienica/Info.plist;
+				DEVELOPMENT_TEAM = WJ7R3MDXSW;
+				INFOPLIST_FILE = "$(SRCROOT)/szubienica/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.miltenkot.szubienica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,7 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = szubienica/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/szubienica/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.miltenkot.szubienica;
 				PRODUCT_NAME = "$(TARGET_NAME)";

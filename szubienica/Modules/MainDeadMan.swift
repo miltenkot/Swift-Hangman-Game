@@ -9,12 +9,19 @@
 import UIKit
 @IBDesignable
 class MainDeadMan: DeadMan {
+    var pathCase:[UIBezierPath] = []
+    var cout = 0
     
-  //MARK: UIBezzierPath Controller
-    public var pathCase:[UIBezierPath] = []
-    public func whatStep(arg:Int)->[UIBezierPath]{
+    override func draw(_ rect: CGRect) {
+        UIColor.black.set()
+        let step  =  whatStep(arg: cout)
+        for arg in step{
+            arg.stroke()
+        }
+    }
+    
+    func whatStep(arg:Int)->[UIBezierPath]{
         switch arg {
-      
         case 1:
             pathCase.append(pathForFirstStep())
         case 2:
@@ -33,33 +40,9 @@ class MainDeadMan: DeadMan {
             pathCase.append(pathForEighthStep())
         case 9:
             pathCase.append(pathForNinthStep())
-        
-       
-            
         default:
             return pathCase
         }
         return pathCase
-        
-        
-        
-    }
-    //says that the level and icrement after mistake
-    public var cout = 0
-    
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    
-    override func draw(_ rect: CGRect) {
-        
-        UIColor.black.set()
-        let step  =  whatStep(arg: cout)
-        for arg in step{
-            arg.stroke()
-        }
-        
-        
-        
-        
     }
 }
