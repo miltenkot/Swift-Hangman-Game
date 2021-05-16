@@ -7,6 +7,5 @@
 //
 
 enum Result {
-    case won
-    case lose
+    case won, lose
 }

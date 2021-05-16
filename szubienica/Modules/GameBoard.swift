@@ -9,18 +9,18 @@
 import UIKit
 
 class GameBoard: UIViewController {
-    private var allWords = [String]()
-    private var guesses = 9
-    private var target = ""
-    private var badchars = ""
-    private var attempt = ""
-    
     @IBOutlet weak var badLettersLabel: UILabel!
     @IBOutlet weak var HangManOutlet: MainDeadMan!
     @IBOutlet weak var attemptsLabel: UILabel!
     @IBAction func addLetter(_ sender: UIButton) {
         addCurrentLetter(sender)
     }
+    
+    private var allWords = [String]()
+    private var guesses: Int = 9
+    private var target: String = ""
+    private var badchars: String = ""
+    private var attempt: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,9 +90,15 @@ class GameBoard: UIViewController {
             alertTitle = "Przegrałeś"
         }
         let alert = UIAlertController(title: nil, message: alertTitle, preferredStyle: .alert)
+        
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
             self?.dismiss(animated: true, completion: nil)
         }))
+        
+        alert.addAction(UIAlertAction(title: "Restart", style: .default, handler: { [weak self] _ in
+            self?.restart()
+        }))
+       
         self.present(alert, animated: true)
     }
     
